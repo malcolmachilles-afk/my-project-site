@@ -1,0 +1,374 @@
+:root {
+  --bg: #050814;
+  --bg-alt: #0d1221;
+  --bg-elevated: #111729;
+  --accent: #4fc3f7;
+  --accent-soft: rgba(79, 195, 247, 0.12);
+  --accent-strong: #00e5ff;
+  --text-main: #f5f7ff;
+  --text-muted: #9aa4c6;
+  --border-subtle: #1f2941;
+  --card-radius: 14px;
+  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.65);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    sans-serif;
+  background: radial-gradient(circle at top, #181e3a 0, #050814 48%, #02030a 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+/* Top navigation */
+
+.nav-shell {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 8, 20, 0.97),
+    rgba(5, 8, 20, 0.9),
+    transparent
+  );
+  backdrop-filter: blur(16px);
+}
+
+.nav {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-mark {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #00e5ff, #3b82f6);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.9);
+}
+
+.nav-name {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.4rem;
+  font-size: 0.85rem;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.nav-link.active {
+  color: var(--accent-strong);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #00e5ff, #4fc3f7);
+}
+
+@media (max-width: 720px) {
+  .nav {
+    padding-inline: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .nav-name {
+    display: none;
+  }
+}
+
+/* Generic layout pieces */
+
+.header-block {
+  padding: 1.4rem 0 2rem;
+}
+
+.tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.28rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  color: var(--accent);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  margin-bottom: 1.1rem;
+}
+
+.tag-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #22d3ee;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.85);
+}
+
+h1 {
+  font-size: clamp(2.3rem, 3.1vw + 1.6rem, 3.2rem);
+  line-height: 1.05;
+  margin-bottom: 0.6rem;
+}
+
+.subtitle {
+  font-size: 0.96rem;
+  color: var(--text-muted);
+  max-width: 36rem;
+  line-height: 1.6;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.85fr) minmax(0, 1.3fr);
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 880px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: linear-gradient(150deg, var(--bg-alt), #050814);
+  border-radius: var(--card-radius);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  padding: 1.4rem 1.5rem 1.3rem;
+}
+
+.card + .card {
+  margin-top: 1.1rem;
+}
+
+.card h2 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+}
+
+.pill {
+  font-size: 0.75rem;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Project cards */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid rgba(37, 99, 235, 0.6);
+  background: radial-gradient(
+    circle at top left,
+    rgba(37, 99, 235, 0.15),
+    rgba(15, 23, 42, 0.95)
+  );
+  padding: 1.1rem 1rem 1rem;
+}
+
+.project-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.project-title {
+  font-size: 0.99rem;
+  font-weight: 600;
+}
+
+.project-status {
+  font-size: 0.75rem;
+  padding: 0.12rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(96, 165, 250, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text-muted);
+}
+
+.project-desc {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.project-tag {
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.project-link {
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+/* Resume / list styles */
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.list strong {
+  color: #e5e7ff;
+}
+
+.section-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.section-block {
+  margin-bottom: 1.5rem;
+}
+
+/* Simple contact layout */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+  gap: 1.6rem;
+  margin-top: 1.7rem;
+}
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+}
+
+.contact-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(30, 64, 175, 0.6);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}

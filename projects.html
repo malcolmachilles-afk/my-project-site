@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects – Malcolm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="nav-shell">
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="nav-mark"></div>
+        <div class="nav-name">Malcolm – Engineering</div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <main class="page">
+    <header class="header-block">
+      <div class="tagline">
+        <span class="tag-dot"></span>
+        <span>Project index</span>
+      </div>
+      <h1>Projects & experiments</h1>
+      <p class="subtitle">
+        A selection of work spanning composite tooling, aircraft configuration studies,
+        and small tools that tie CAD, analysis, and manufacturing together.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>Projects</h2>
+      <div class="project-grid" style="margin-top: 0.6rem;">
+        <article class="project-card">
+          <div class="project-title-row">
+            <div class="project-title">Composite tooling workflow experiments</div>
+            <span class="project-status">In progress</span>
+          </div>
+          <p class="project-desc">
+            Building a reproducible workflow for carbon/epoxy layup tools: material selection,
+            plug strategies, cure cycles, and documentation that actually helps technicians.
+          </p>
+          <div class="project-meta">
+            <div class="project-tags">
+              <span class="project-tag">Tooling design</span>
+              <span class="project-tag">Process</span>
+              <span class="project-tag">Docs</span>
+            </div>
+            <!-- Replace # with real links when you have them -->
+            <a class="project-link" href="#"><span>View notes (soon) →</span></a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-title-row">
+            <div class="project-title">Electric aircraft configuration studies</div>
+            <span class="project-status">Concept</span>
+          </div>
+          <p class="project-desc">
+            Exploring high-efficiency, composite-heavy aircraft concepts: multi-boom,
+            boundary-layer ingestion, and distributed propulsion, with an eye on realistic
+            structures and manufacturability.
+          </p>
+          <div class="project-meta">
+            <div class="project-tags">
+              <span class="project-tag">Aero concept</span>
+              <span class="project-tag">Structures</span>
+              <span class="project-tag">Trade studies</span>
+            </div>
+            <a class="project-link" href="#"><span>Configuration sketches →</span></a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-title-row">
+            <div class="project-title">Climbing hardware & training experiments</div>
+            <span class="project-status">Ongoing</span>
+          </div>
+          <p class="project-desc">
+            Small engineering projects around climbing: gear layouts, load paths, and how
+            training and equipment choices show up in real-world performance.
+          </p>
+          <div class="project-meta">
+            <div class="project-tags">
+              <span class="project-tag">Applied mechanics</span>
+              <span class="project-tag">Testing</span>
+              <span class="project-tag">Field use</span>
+            </div>
+            <a class="project-link" href="#"><span>Project log (soon) →</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Malcolm.</span>
+      <span>See also: <a href="resume.html">Resume</a> · <a href="contact.html">Contact</a></span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

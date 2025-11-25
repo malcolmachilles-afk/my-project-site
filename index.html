@@ -1,6 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Malcolm – Engineering Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
 <body>
-  <h1>Hello world — first commit</h1>
+  <div class="nav-shell">
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="nav-mark"></div>
+        <div class="nav-name">Malcolm – Engineering</div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <main class="page">
+    <header class="header-block">
+      <div class="tagline">
+        <span class="tag-dot"></span>
+        <span>Aerospace / Composites / R&D</span>
+      </div>
+      <h1>Engineering projects at the intersection of composites, flight, and tooling.</h1>
+      <p class="subtitle">
+        I work on composite tooling, experimental aircraft concepts, and process automation —
+        taking ideas from sketch and stress-calcs to real hardware and repeatable manufacturing.
+      </p>
+    </header>
+
+    <section class="main-layout">
+      <section>
+        <div class="card">
+          <h2>Current focus</h2>
+          <p>
+            Lightweight composite structures, manufacturable airframe concepts, and hands-on
+            process development — especially where CAD, analysis, and shop-floor reality meet.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Composite tooling</span>
+            <span class="pill">FeatureScript / CAD automation</span>
+            <span class="pill">Aircraft configuration studies</span>
+            <span class="pill">Process engineering</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 1.1rem;">
+          <h2>Selected projects</h2>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-title-row">
+                <div class="project-title">Composite tooling workflow experiments</div>
+                <span class="project-status">In progress</span>
+              </div>
+              <p class="project-desc">
+                Iterating on digital travelers, plug strategies, and process documentation to
+                reduce rework and lead time for carbon/epoxy layup tools.
+              </p>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="project-tag">Carbon/epoxy tools</span>
+                  <span class="project-tag">Process</span>
+                  <span class="project-tag">Python / CAD</span>
+                </div>
+                <a class="project-link" href="projects.html"><span>View details →</span></a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-title-row">
+                <div class="project-title">Conceptual electric aircraft configurations</div>
+                <span class="project-status">Concept</span>
+              </div>
+              <p class="project-desc">
+                Exploring distributed propulsion, boundary-layer ingestion, and composite
+                airframes to push structural mass fraction and mission efficiency.
+              </p>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="project-tag">Aero concept</span>
+                  <span class="project-tag">Structures</span>
+                  <span class="project-tag">Trade studies</span>
+                </div>
+                <a class="project-link" href="projects.html"><span>View details →</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h2>Profile</h2>
+          <p>
+            Hands-on engineer comfortable moving between CAD, analysis, and layup tables.
+            I like building tools that make good engineering the default on the shop floor.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Mac / VS Code / Git</span>
+            <span class="pill">Python</span>
+            <span class="pill">Onshape / CATIA</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Quick links</h2>
+          <ul class="list">
+            <li><strong>Projects:</strong> <a href="projects.html">Project index</a></li>
+            <li><strong>Resume:</strong> <a href="resume.html">Experience & skills</a></li>
+            <li><strong>Contact:</strong> <a href="contact.html">How to reach me</a></li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Malcolm. All rights reserved.</span>
+      <span>Built with VS Code, Git, and GitHub Pages.</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

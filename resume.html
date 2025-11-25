@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume – Malcolm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="nav-shell">
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="nav-mark"></div>
+        <div class="nav-name">Malcolm – Engineering</div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="resume.html" class="nav-link active">Resume</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <main class="page">
+    <header class="header-block">
+      <div class="tagline">
+        <span class="tag-dot"></span>
+        <span>Experience & skills</span>
+      </div>
+      <h1>Resume snapshot</h1>
+      <p class="subtitle">
+        A condensed view of experience, skills, and tools. For a full PDF, link it below
+        when you’re ready.
+      </p>
+    </header>
+
+    <section class="main-layout">
+      <section>
+        <div class="card">
+          <h2>Experience</h2>
+          <div class="section-block">
+            <div class="section-title">Recent work</div>
+            <ul class="list">
+              <li>
+                <strong>Composite tooling & process</strong> – designing, documenting,
+                and improving carbon/epoxy tooling workflows from CAD through layup.
+              </li>
+              <li>
+                <strong>Aircraft concept & structures</strong> – exploring composite-friendly
+                configurations and structural layouts with manufacturability in mind.
+              </li>
+            </ul>
+          </div>
+
+          <div class="section-block">
+            <div class="section-title">Focus areas</div>
+            <ul class="list">
+              <li>Composite layup tools and cure cycles</li>
+              <li>CAD automation and scripting (FeatureScript / macros)</li>
+              <li>Process documentation that connects engineering to the shop floor</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h2>Skills & tools</h2>
+          <div class="section-block">
+            <div class="section-title">Technical</div>
+            <ul class="list">
+              <li>Composite tooling design (carbon/epoxy, high-temp boards, etc.)</li>
+              <li>CAD: Onshape, CATIA / 3D experience, parametric workflows</li>
+              <li>Python scripting for small utilities and analysis helpers</li>
+              <li>Basic FEA / trade study mindset for structures</li>
+            </ul>
+          </div>
+          <div class="section-block">
+            <div class="section-title">Software</div>
+            <ul class="list">
+              <li>macOS, VS Code, Git, GitHub</li>
+              <li>Spreadsheet-based analysis & planning</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Full resume</h2>
+          <p>
+            When you have a polished PDF, upload it somewhere (GitHub, Drive, etc.) and link it here:
+          </p>
+          <ul class="list" style="margin-top: 0.7rem;">
+            <li><strong>PDF:</strong> <a href="#">Add resume link</a></li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Malcolm.</span>
+      <span><a href="projects.html">Projects</a> · <a href="contact.html">Contact</a></span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

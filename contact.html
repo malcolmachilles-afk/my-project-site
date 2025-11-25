@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – Malcolm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="nav-shell">
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="nav-mark"></div>
+        <div class="nav-name">Malcolm – Engineering</div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <main class="page">
+    <header class="header-block">
+      <div class="tagline">
+        <span class="tag-dot"></span>
+        <span>Contact</span>
+      </div>
+      <h1>Get in touch</h1>
+      <p class="subtitle">
+        Best for project questions, collaboration ideas, or anything related to composites,
+        tooling, and experimental aircraft concepts.
+      </p>
+    </header>
+
+    <section class="contact-grid card">
+      <div>
+        <div class="section-title">How to reach me</div>
+        <ul class="contact-list">
+          <li>
+            <div class="contact-label">Email</div>
+            <!-- replace with your real email when you're ready -->
+            <a href="mailto:your.email@example.com">your.email@example.com</a>
+          </li>
+          <li>
+            <div class="contact-label">GitHub</div>
+            <a href="https://github.com/malcolmachilles-afk" target="_blank">
+              github.com/malcolmachilles-afk
+            </a>
+          </li>
+          <!-- Add more (LinkedIn, etc.) if you want -->
+        </ul>
+      </div>
+
+      <div>
+        <div class="section-title">What I’m interested in</div>
+        <ul class="list">
+          <li>Composite tooling and process challenges</li>
+          <li>Experimental aircraft / unconventional configurations</li>
+          <li>Tooling for climbing or outdoor gear</li>
+          <li>Small Python/CAD automation ideas that remove friction</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Malcolm.</span>
+      <span><a href="index.html">Home</a> · <a href="projects.html">Projects</a></span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
